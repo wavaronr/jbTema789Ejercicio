@@ -3,7 +3,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
  */
 
+
 package com.jbtema4ejercicio.jbtema789ejercicio;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Vector;
 
 /**
  *
@@ -41,6 +46,53 @@ public class JbTema789Ejercicio {
             
         System.out.println(myArrayUniD[i]);
         }
+        
+         //Crea un "Vector" del tipo de dato que prefieras, y añádele 5 elementos. Elimina el 2o y 3er elemento y muestra el resultado final.
+         Vector<String> myVector = new Vector<>();
+         
+         myVector.add("primero");
+         myVector.add("segundo");//
+         myVector.add("tercero");//
+         myVector.add("cuarto");
+         myVector.add("quinto");
+         
+         myVector.remove(1);
+         myVector.remove(1);
+         
+         for (String i : myVector){
+         System.out.println(i);
+         }
+         
+         /*
+         ¿Indica cuál es el problema de utilizar un Vector con la capacidad por defecto si tuviésemos 1000 elementos para ser añadidos al mismo.?
+         el problema es cuando llega al limite porque al redimensionar el vector genera lentitud en el proceso 
+         **/
+         
+         
+         //Crea un ArrayList de tipo String, con 4 elementos. Cópialo en una LinkedList. Recorre ambos mostrando únicamente el valor de cada elemento.
+         
+         ArrayList<String> myArrayList = new ArrayList<>();
+         
+         myArrayList.add("primero");
+         myArrayList.add("segundo");
+         myArrayList.add("Tercero");
+         myArrayList.add("Cuarto");
+         
+         System.out.println("--Array List--" );
+         LinkedList<String> myLinkedList = new LinkedList<>();
+         
+        myLinkedList.addAll(myArrayList);
+        
+        for(String i :myArrayList){
+        System.out.println(i);
+        }
+        System.out.println("--LinkedList--" );
+        
+        for(String i :myLinkedList){
+        System.out.println(i);
+        }
+        
+         
         
         
         
