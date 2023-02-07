@@ -92,10 +92,35 @@ public class JbTema789Ejercicio {
         System.out.println(i);
         }
         
+        // Crea un ArrayList de tipo int, y, utilizando un bucle rellénalo con elementos 1..10. A continuación, con otro bucle, recórrelo y elimina los numeros pares. Por último, vuelve a recorrerlo y muestra el ArrayList final. Si te atreves, puedes hacerlo en menos pasos, siempre y cuando cumplas el primer "for" de relleno.
+        
+         ArrayList<Integer> myArrayList2 = new ArrayList<>();
+        
+         for(int i=0;i<10;i++){
+         myArrayList2.add(i+1);
+         }
+         
+         for(int i=0;i<myArrayList2.size();i++){
+         if(myArrayList2.get(i)%2==0){    
+         myArrayList2.remove(i);
+         }
+         }
+         for(int i=0;i<myArrayList2.size();i++){
+         System.out.println(myArrayList2.get(i));
+         }
+         
+         System.out.println(division(10,0));
          
         
+    }
+    
+       public static int division(int a, int b) throws ArithmeticException {
         
+        if(b==0)
+        {throw new ArithmeticException("el Divisor no puede ser cero");}
         
-        
+        return a/b;
+                
+    
     }
 }
