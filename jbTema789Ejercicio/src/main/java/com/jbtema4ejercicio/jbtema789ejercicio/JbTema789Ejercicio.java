@@ -109,15 +109,32 @@ public class JbTema789Ejercicio {
          System.out.println(myArrayList2.get(i));
          }
          
-         System.out.println(division(10,0));
          
+         //Crea una función DividePorCero. Esta, debe generar una excepción ("throws") a su llamante del tipo ArithmeticException que será capturada por su llamante (desde "main", por ejemplo). Si se dispara la excepción, mostraremos el mensaje "Esto no puede hacerse". Finalmente, mostraremos en cualquier caso: "Demo de código".
+         try{
+         System.out.println(division(10,0));
+         }
+         catch (ArithmeticException e){
+         System.out.println(e.getMessage());
+         }
+         finally{
+          System.out.println("Demo de código");
+         }
+         
+         
+         //Utilizando InputStream y PrintStream, crea una función que reciba dos parámetros: "fileIn" y "fileOut". La tarea de la función será realizar la copia del fichero dado en el parámetro "fileIn" al fichero dado en "fileOut
+         
+         
+        
         
     }
     
        public static int division(int a, int b) throws ArithmeticException {
         
         if(b==0)
-        {throw new ArithmeticException("el Divisor no puede ser cero");}
+            {
+            throw new ArithmeticException("el Divisor no puede ser cero");
+            }
         
         return a/b;
                 
